@@ -18,6 +18,12 @@ body {
   padding: 2rem;
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
 .card {
   background: white;
   border-radius: 20px;
@@ -26,6 +32,13 @@ body {
   border: 1px solid #e2e8f0;
   margin-bottom: 2rem;
   transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 1.5rem;
+    border-radius: 16px;
+  }
 }
 
 .card:hover {
@@ -49,10 +62,24 @@ body {
   padding: 0 2rem;
 }
 
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+}
+
 .nav-links {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 0.25rem;
+    justify-content: center;
+  }
 }
 
 .nav-links a {
@@ -65,6 +92,18 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .nav-links a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+  
+  .nav-links a svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 .nav-links a:hover {
@@ -191,9 +230,22 @@ input::placeholder, textarea::placeholder {
   border: 1px solid #e2e8f0;
 }
 
+@media (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+    border-radius: 12px;
+  }
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
+}
+
+@media (max-width: 768px) {
+  table {
+    min-width: 600px;
+  }
 }
 
 th {
@@ -208,10 +260,24 @@ th {
   border-bottom: 2px solid #e2e8f0;
 }
 
+@media (max-width: 768px) {
+  th {
+    padding: 12px 8px;
+    font-size: 12px;
+  }
+}
+
 td {
   padding: 20px;
   border-bottom: 1px solid #f1f5f9;
   font-size: 15px;
+}
+
+@media (max-width: 768px) {
+  td {
+    padding: 12px 8px;
+    font-size: 13px;
+  }
 }
 
 tr:hover {
@@ -230,6 +296,13 @@ tr:last-child td {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .section-title {
   font-size: 1.25rem;
   font-weight: 600;
@@ -245,6 +318,13 @@ tr:last-child td {
   background: #f8fafc;
   transition: all 0.2s ease;
   cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .upload-area {
+    padding: 2rem 1rem;
+    border-radius: 12px;
+  }
 }
 
 .upload-area:hover {
@@ -393,4 +473,27 @@ tr:last-child td {
   color: #64748b;
   font-size: 14px;
   font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .nav-links a span {
+    display: none;
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .tabs {
+    flex-direction: column;
+  }
+  
+  .tab {
+    text-align: center;
+  }
 }
